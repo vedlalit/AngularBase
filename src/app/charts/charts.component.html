@@ -1,0 +1,19 @@
+<!-- <button value="Folders" (click)="getProcessDetails('')">Process</button> -->
+<div class="container">
+    <table class="table table-success table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pname of myData">
+                <td (click)="getProcessDetails(pname.ProcessNames)">{{pname.ProcessNames}} </td>
+                <!-- <td (click)="openProcessModal()">View Data</td>
+                <td><button (click)="setData()"></button>Set</td> -->
+               
+            </tr>
+        </tbody>
+    </table>
+
+</div>

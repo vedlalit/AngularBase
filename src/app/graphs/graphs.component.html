@@ -1,0 +1,37 @@
+<!-- <p>graphs works!</p> -->
+<!-- {{data}} -->
+<div class="container">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr style="text-align:center" >
+                <th>Date</th>
+                <th>Process</th>
+                <th>started</th>
+                <th>End</th>
+
+            </tr>
+        </thead>
+        <tbody style="text-align:center">
+            <tr *ngFor="let pname of data">
+                <td>{{pname.Date}} </td>
+                <td>{{pname.ProcessName}} </td>
+                <td>{{pname.Start_Time}}</td>
+                <td>{{pname.End_Time}}</td>
+               
+
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+<div style="text-align:center">
+    <!-- <h1>
+      Welcome to {{ title }}!
+    </h1> -->
+    <canvas id="lineChart" ></canvas>
+    <!-- <canvas id="barChart"></canvas>
+    <canvas id="pieChart"></canvas> -->
+  </div>
+<!-- <div *ngIf="chart">
+    <canvas id="canvas">{{ chart }}</canvas>
+  </div> -->

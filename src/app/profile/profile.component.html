@@ -1,0 +1,23 @@
+<nav>
+    <div class="nav-wrapper">
+      <a class="brand-logo center">
+        <i class="material-icons">assignment_ind</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      </ul>
+    </div>
+  </nav>
+  <div class="row" *ngIf="user">
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-content">
+          <span> <Strong> Username  : </Strong>{{user.UserName}}</span>
+          <br>
+          <span><strong>Email  : </strong>{{user.UserEmail}}</span>
+          <br>
+          <!-- <span>Full Name : {{userClaims.FirstName}} {{userClaims.LastName}}</span> -->
+          <!-- <br> -->
+          <span><strong>Role  : </strong>{{user.UserRole}}</span>
+        </div>
+      </div>
+    </div>
+  </div>

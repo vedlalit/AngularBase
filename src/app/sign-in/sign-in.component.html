@@ -1,0 +1,110 @@
+<!-- 
+<div class="container">  
+    <div class="row">  
+          
+      <div class="col-md-4"></div>  
+      <div class="col-md-4 jumbotron">  
+          <h3>Login</h3><hr>  
+          <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>  
+              <div class="form-group">  
+                  <label for="uname">User Name:</label>  
+                  <div class="input-group">  
+                    <div class="input-group-addon glyphicon glyphicon-user"></div>  
+                    <input type="text" placeholder="username" formControlName="username" maxlength="20" class="form-control">  
+                  </div>  
+                  <div class="alert alert-danger" *ngIf="form.controls['username'].dirty && form.controls['username'].invalid">  
+                      <div *ngIf="form.controls['username'].hasError('required')">Username is required</div>  
+                    </div>  
+              </div>  
+      
+              <div class="form-group">  
+                  <label for="pwd">Password:</label>  
+                  <div class="input-group">  
+                    <div class="input-group-addon glyphicon glyphicon-lock"></div>  
+                    <input type="password" placeholder="password" formControlName="password"   class="form-control">  
+                  </div>  
+                  <div class="alert alert-danger" *ngIf="form.controls['password'].dirty && form.controls['password'].invalid">  
+                      <div *ngIf="form.controls['password'].hasError('required')">Password is required</div>  
+                      <div *ngIf="form.controls['password'].hasError('minlength')">Password must minlength 6 characters long.</div>  
+                  </div>  
+              </div>  
+           <div class="form-group">                     
+                  <input type="submit" value="Login" class="btn btn-primary" [disabled]="form.invalid" >   
+              </div>  
+              <div class="form-group">  
+                <div class="col-md-12 alert alert-danger" *ngIf="errmsg">{{errmsg}}</div>  
+            </div>  
+              
+            <div class="form-group">  
+                <div class="col-md-12 alert alert-success" *ngIf="successmsg">{{successmsg}}</div>  
+            </div>  
+      
+            </form>  
+      </div>       
+    </div>  
+   </div>   -->
+ <div class="sidenav" style="background-image:'https://clipartart.com/images/logo-accenture-clipart-8.png';">
+     <div class="login-main-text">
+        <h2>RVHR<br> LOGIN PAGE</h2>
+        <p>NG-WEBAPI DEMO APPLICATION.</p>
+     </div>
+  </div>
+   
+  <div class="main">
+     <div class="col-md-6 col-sm-12">
+        <div class="login-form">
+         <form #loginForm="ngForm" class="col s12 white" (ngSubmit)="OnSubmit(UserName.value,Password.value,loginForm)">
+             <div class="row">
+               <div class="input-field col s12">
+            
+                 <i class="material-icons prefix">account_circle</i>
+                 
+                 <input type="text" #UserName ngModel name="UserName" placeholder="Username" class="form-control" required>
+               </div>
+             </div>
+             <div class="row">
+                <div class="input-field col s12">
+                  
+             <i class="material-icons prefix">vpn_key</i>
+              <input type="password" class="form-control" #Password ngModel name="Password" placeholder="Password" required>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                  <div class="input-field col s12">
+                    <button [disabled]="!loginForm.valid" class="btn btn-md btn-block" type="submit">Login</button>
+                  </div>
+
+                </div>
+                
+               
+               
+                   <!-- <div class="alert alert-danger" role="alert" *ngIf="isLoginError">
+                       <i class="material-icons">error</i>Incorrect Username or Password
+                   </div>   -->
+              
+                 
+ 
+          </form>
+        
+       
+        </div>
+       
+     </div>
+ 
+  </div>
+  
+
+           <!-- <form>
+              <div class="form-group">
+                 <label>User Name</label>
+                 <input type="text" class="form-control" placeholder="User Name">
+              </div>
+              <div class="form-group">
+                 <label>Password</label>
+                 <input type="password" class="form-control" placeholder="Password">
+              </div>
+              <button type="submit" class="btn btn-black">Login</button>
+              <button type="submit" class="btn btn-light">Register</button>
+           </form> -->
+ 

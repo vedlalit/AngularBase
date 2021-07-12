@@ -1,0 +1,82 @@
+<div class="jumbotron">
+
+    <div class="col">
+       
+      
+    <!-- <h1 class="display-4 text-center">Employee Register</h1> -->
+    <nav class="navbar fixed-top navbar-light" style="background-color: #fdfdfd00;">
+        <div>
+        <a class="navbar-brand" href="http://localhost:4200/">
+            <img src="https://clipartart.com/images/logo-accenture-clipart-8.png"
+             height="30" class="d-inline-block align-top" alt="RVHR"> 
+        </a>
+    </div>
+       
+   <!-- <div>
+            <button mat-button [matMenuTriggerFor]="menu">{{user.UserName}}</button>
+            <mat-menu #menu="matMenu" yPosition="above">
+              <button mat-menu-item>PROFILE</button>
+              <button mat-menu-item>CHANGE PASSWORD</button>
+            </mat-menu>
+        </div> -->
+        
+       <a class="navbar-brand">
+           <div class="col">
+     
+            <div class="btn-group " style="border-color:#5eddc2 ;">
+               
+           
+                <button type="button" class="btn " style="background-color: #5eddc2;"><strong>{{user.UserName}}</strong></button>
+                <button type="button" class="btn  dropdown-toggle dropdown-toggle-split" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: #5eddc2;" data-offset="5,10">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu " style="background-color: #ffffff;" aria-labelledby="dropdownMenuOffset">
+                    <!-- <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a> -->
+                    <button class="dropdown-item"  (click)="openModal()">PROFILE</button>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">CHANGE PASSWORD</a>
+                  </div>
+                  <button type="button" class="btn btn-outline-secondary btn-sm" style="border-color:#5eddc2 ;" data-toggle="popover" title="Employees Table with Material-Angular" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?"  (click)="openProcessModal()"> <strong>BP LOCAL PROCESS</strong></button>
+                  <button type="button" class="btn btn-outline-secondary btn-sm" style="border-color:#5eddc2 ;" data-toggle="popover" title="Employees Table with Material-Angular" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?"  (click)="openChartsModal()"> <strong>VIEW GRAPH</strong></button>
+                  <button type="button" class="btn btn-outline-secondary btn-sm" (click)="Logout()" style="border-color:#5eddc2 ;"><span class="material-icons prefix" style="color:#000000" >power_settings_new</span></button>
+               
+            <!-- <mat-form-field>
+                <mat-label>{{user.UserName}}</mat-label>
+                <mat-select>
+                  <mat-option *ngFor="let profile of profiles" [value]="profile.value">
+                    {{profile.viewValue}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field> -->
+         
+           
+           
+        </div>
+    </div>
+      
+        </a>
+  
+            <!-- {{userclaims.UserName}} -->
+            <!-- <span>{{userclaims.UserName}}</span> -->
+        
+    
+       
+     
+      </nav>
+    </div>
+ 
+    <hr>
+<!-- <div style="height: 20px;">   </div> -->
+    <div class="col">
+        <div class="col-lg-15">
+            <app-employee></app-employee>
+        </div>
+        <div class="col-lg-15">
+            <app-employee-list></app-employee-list>
+        </div>
+        <!-- <span>{{userclaims.UserName}}</span> -->
+ 
+</div>
+</div>
+

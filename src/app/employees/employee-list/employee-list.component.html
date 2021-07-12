@@ -1,0 +1,52 @@
+<!-- <table class="table table-hover">
+    <tr *ngFor="let emp of service.list">
+      <td (click)="populateForm(emp)">[{{emp.EMPCode}}]-{{emp.FullName}}</td>
+      <td (click)="populateForm(emp)">{{emp.Position}}</td>
+      <td (click)="populateForm(emp)">{{emp.Mobile}}</td>
+      <td><button (click)="onDelete(emp.EmployeeID)" class="btn btn-sm btn-outline-danger">X</button></td>
+    </tr>
+  </table> -->
+  <div class="table-responsive-lg">  
+    <table class="table table-striped table-light" datatable>  
+        <thead  style="background-color: #5eddc2;">  
+            <tr class="text-center text-uppercase">  
+                <!-- <th>Employee ID</th>   -->
+                <th>Name</th>  
+                <th>Employee Code</th>  
+                <th>Position</th>  
+                <th>Mobile</th>
+                <th>Remove</th>
+                <th>Modal</th>
+              </tr>  
+        </thead>  
+        <tbody>  
+          <tr *ngFor="let emp of service.list | paginate:{itemsPerPage: 7, currentPage:p}" class="text-center">  
+            <!-- <td (click)="populateForm(emp)" type="hidden">{{emp.EmployeeID}}</td> -->
+            <td (click)="populateForm(emp)">{{emp.FullName}}</td>  
+            <td (click)="populateForm(emp)">{{emp.EMPCode}}</td>  
+            <td (click)="populateForm(emp)">{{emp.Position}}</td>
+            <td (click)="populateForm(emp)">{{emp.Mobile}}</td>
+            <td>
+              <button class="btn btn-outline-light"> 
+              <i class="material-icons prefix" style="color: orangered;" (click)="OpenModal(emp.EmployeeID,emp.FullName)">delete_forever</i>
+            </button>
+            </td>  
+            <td>
+                <button class="btn btn-outline" >
+                <!-- <div><small>OPEN</small></div> -->
+                <i class="material-icons prefix" style="color:darkcyan" >launch</i>
+                <!-- <div class="text-dark" aria-hidden="true"><small>Open Employee Details in modal</small></div> -->
+              </button>
+            
+                
+            
+          </tr>  
+        </tbody>  
+      </table>  
+      <div id="pagination">
+        <pagination-controls (pageChange)="p=$event"></pagination-controls>
+    </div>    
+    </div>  
+
+
+
